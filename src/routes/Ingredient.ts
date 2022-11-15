@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express';
 import { IngredientController } from '../controllers/IngredientController';
+import * as Auth from '../middleware/authenticate';
 
 const ingredientController = new IngredientController();
 
@@ -12,9 +13,9 @@ router.get('/ingredient', (req: Request, res: Response) => ingredientController.
 router.get('/ingredient/voir/:id', (req, res) => ingredientController.voirIngredient(req, res));
 
 // Créer une Recette 
-router.post('/ingredient/ajouter', (req: Request, res: Response) => ingredientController.create(req, res));
+router.route('/ingredient/ajouter').post(Auth.authorize(['addRecipe']), ingredientController.create);
 // Supprimer une Recette 
-router.delete('/ingredient/supprimer/:id', (req: Request, res: Response) => ingredientController.delete(req, res));
+router.route('/ingredient/supprimer/:id').delete(Auth.authorize(['addRecipe']), ingredientController.delete);
 // MAJ Recette 
 router.post('/ingredient/maj/:id', (req: Request, res: Response) => ingredientController.update(req, res));
 

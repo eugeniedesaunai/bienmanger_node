@@ -40,7 +40,7 @@ function generateToken() {
             'getRecipeList',
             'showRecipe',
             'updateRecipe',
-            'addRecipe'
+            'addRecipe',
         ]
     };
     // Lecture du fichier private.key permettant de crypter le JWT

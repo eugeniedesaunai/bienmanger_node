@@ -15,7 +15,6 @@ class IngredientController extends CrudController_1.CrudController {
     }
     create(req, res) {
         Ingredient_1.Ingredient.create({
-            "id": req.body.id,
             "nom": req.body.nom,
         }).then(ingredient => res.json(ingredient));
     }
