@@ -117,8 +117,6 @@ app.delete('/image/supprimer/:id', Image_1.router);
 // MAJ Image
 app.post('/image/maj/:id', Image_1.router);
 app.post('/enregistrer', AuthentificateRouter_1.router);
-app.post('/signin', AuthentificateRouter_1.router);
-app.post('/etapes', AuthentificateRouter_1.router);
 app.post('/login', AuthentificateRouter_1.router);
 app.listen(constants_1.PORT, () => {
     console.log(`Server is listenong on port ${constants_1.PORT}`);

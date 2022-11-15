@@ -10,7 +10,5 @@ const authenticateController = new AuthenticateController_1.AuthenticateControll
 exports.router = express_1.default.Router({
     strict: true
 });
-exports.router.route('/etapes').post(authenticateController.signin);
-exports.router.route('/signin').post(authenticateController.signin);
 exports.router.route('/enregistrer').post(authenticateController.signin);
 exports.router.route('/login').post(authenticateController.login);

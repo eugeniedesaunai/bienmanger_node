@@ -5,14 +5,14 @@ import { Model, DataTypes } from 'sequelize';
 import { sequelize } from '../config/database';
 
 export class Recette extends Model {
-    public id!: number;
-    public nom!: string;
-    public slug!: string;
-    public nb_convices!: number;
-    public description!: string;
-    public plat_id!: number;
-    public saison_id!: number;
-    public utilisateur_id!: number;
+    declare id: number;
+    declare name: string;
+    declare slug: string;
+    declare nb_convices: number;
+    declare description: string;
+    declare plat_id: number;
+    declare saison_id: number;
+    declare utilisateur_id: number;
 }
 
 Recette.init({

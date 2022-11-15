@@ -49,6 +49,7 @@ Utilisateur.init({
             model: Permission_1.Permission,
             key: 'id',
         },
+        defaultValue: 1,
         validate: {
             isInt: true,
         },

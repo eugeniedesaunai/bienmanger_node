@@ -3,12 +3,12 @@ import { Model, DataTypes } from 'sequelize';
 import { sequelize } from '../config/database';
 
 export class Utilisateur extends Model {
-    public id!: number;
-    public nom!: string;
-    public prenom!: string;
-    public mail!: string;
-    public mdp!: string;
-    public permission_id!: number;
+    declare id: number;
+    declare nom: string;
+    declare prenom: string;
+    declare mail: string;
+    declare mdp: string;
+    declare permission_id: number;
 }
 
 Utilisateur.init({
@@ -53,6 +53,7 @@ Utilisateur.init({
             model: Permission,
             key: 'id',
         },
+        defaultValue: 1,
         validate: {
             isInt: true,
         },

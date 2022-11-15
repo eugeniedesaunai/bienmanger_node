@@ -9,7 +9,5 @@ export const router = express.Router({
 });
 
 
-router.route('/etapes').post(authenticateController.signin);
-router.route('/signin').post(authenticateController.signin);
 router.route('/enregistrer').post(authenticateController.signin);
 router.route('/login').post(authenticateController.login);

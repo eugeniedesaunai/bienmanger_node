@@ -2,8 +2,8 @@ import { Model, DataTypes } from 'sequelize';
 import { sequelize } from '../config/database';
 
 export class Plat extends Model {
-    public id!: number;
-    public menu!: string;
+    declare id: number;
+    declare menu: string;
 }
 
 Plat.init({

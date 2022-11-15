@@ -3,9 +3,9 @@ import { Model, DataTypes } from 'sequelize';
 import { sequelize } from '../config/database';
 
 export class Etape extends Model {
-    public id!: number;
-    public contenu!: string;
-    public recette_id!: number;
+    declare id: number;
+    declare contenu: string;
+    declare recette_id: number;
 }
 
 Etape.init({

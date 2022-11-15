@@ -3,10 +3,10 @@ import { Model, DataTypes } from 'sequelize';
 import { sequelize } from '../config/database';
 
 export class Image extends Model {
-    public id!: number;
-    public url!: string;
-    public texte_alternatif!: string;
-    public recette_id!: number;
+    declare id: number;
+    declare url: string;
+    declare texte_alternatif: string;
+    declare recette_id: number;
 }
 
 Image.init({

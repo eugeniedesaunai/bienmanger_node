@@ -2,8 +2,8 @@ import { Model, DataTypes } from 'sequelize';
 import { sequelize } from '../config/database';
 
 export class Saison extends Model {
-    public id!: number;
-    public nom!: string;
+    declare id: number;
+    declare nom: string;
 }
 
 Saison.init({

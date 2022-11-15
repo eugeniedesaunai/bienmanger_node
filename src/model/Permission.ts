@@ -2,8 +2,8 @@ import { Model, DataTypes } from 'sequelize';
 import { sequelize } from '../config/database';
 
 export class Permission extends Model {
-    public id!: number;
-    public role!: string;
+    declare id: number;
+    declare role: string;
 }
 
 Permission.init({

@@ -103,11 +103,8 @@ app.post('/permission/maj/:id', routerPermission);
 //
 // Etape OK
 //
-
 app.post('/etapes', authenticateRouter);
 app.get('/etape/voir/:id', routerEtape);
-
-
 // ajouter une Etape 
 app.post('/etape/ajouter', routerEtape);
 // supprimer une Etape
@@ -129,15 +126,12 @@ app.post('/image/maj/:id', routerImage);
 
 
 app.post('/enregistrer', authenticateRouter);
-app.post('/signin', authenticateRouter);
-app.post('/etapes', authenticateRouter);
 app.post('/login', authenticateRouter);
 
 
 
 app.listen(PORT, () => {
     console.log(`Server is listenong on port ${PORT}`);
-
 });
 
 
